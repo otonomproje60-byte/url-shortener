@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  url-shortener:
+    build: ./source
+    ports:
+      - "5000:5000"
+    environment:
+      - BASE_URL=http://localhost:5000
+    volumes:
+      - urlshortener_data:/app/data
+    restart: unless-stopped
+
+volumes:
+  urlshortener_data:
