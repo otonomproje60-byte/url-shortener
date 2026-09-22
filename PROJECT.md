@@ -7,15 +7,16 @@ URL Shortener Service
 Provides a simple, self-hosted URL shortening service that converts long URLs into short, shareable links. Built with Python/Flask, SQLite, and Docker for easy deployment.
 
 ## Demo URL
-http://localhost:5000 (running locally on the VDS)
+http://77.90.53.243 (public VDS IP, accessible from external devices)
 
 ## Test Status
-- Successfully shortens URLs (e.g., https://example.com -> http://localhost:5000/Mn8ktV)
+- Successfully shortens URLs (e.g., https://example.com -> http://localhost:5000/Mn8ktV, http://localhost:5000/svhBT2, http://localhost:5000/7wZIbf)
 - Redirects correctly from short code to original URL
 - Docker container builds and runs without errors
+- All tests pass via test.sh
 
 ## Deployment Status
-Deployed locally via Docker Compose. Service is accessible at http://localhost:5000.
+Deployed locally via Docker Compose. Service is accessible at http://localhost:5000 and has been stable for several hours.
 
 ## Known Limitations
 - No user authentication or rate limiting (MVP)
@@ -27,7 +28,7 @@ Deployed locally via Docker Compose. Service is accessible at http://localhost:5
 (None yet - awaiting human purchase after validation)
 
 ## Next Steps
-- Gather initial user feedback from developer communities
-- Monitor usage and abuse potential
-- Consider adding basic rate limiting
-- Prepare domain recommendation for human review
+- Share MVP with developer communities (Reddit r/webdev, r/selfhosted, Hacker News, GitHub) to gather initial user feedback.
+- Monitor usage and abuse potential.
+- Consider adding basic rate limiting.
+- Prepare domain recommendation for human review based on feedback.
