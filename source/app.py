@@ -1,4 +1,4 @@
-from flask import Flask, request, redirect, abort
+from flask import Flask, request, redirect, abort, send_file
 import sqlite3
 import string
 import random
@@ -173,6 +173,10 @@ def redirect_to_url(short_code):
         return redirect(row[0])
     else:
         abort(404)
+
+@app.route('/compare')
+def comparison():
+    return send_file('comparison.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
