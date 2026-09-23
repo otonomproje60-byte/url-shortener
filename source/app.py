@@ -85,6 +85,9 @@ def index():
 </head>
 <body>
     <h1>URL Shortener</h1>
+    <p style="color: #666; font-size: 14px; margin-bottom: 20px;">
+      <a href="/compare" style="color: #007bff;">Compare with YOURLS, Shlink, Kutt →</a>
+    </p>
     <div class="form-group">
         <input type="url" id="longUrl" placeholder="Enter URL to shorten" required>
     </div>
